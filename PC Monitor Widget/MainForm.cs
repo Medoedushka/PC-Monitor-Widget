@@ -25,10 +25,7 @@ namespace PC_Monitor_Widget
         const uint DOMOVE = 0xF012;
         const uint DOSIZE = 0xF008;
         #endregion
-
-        DriveInfo drive = new DriveInfo("C");
-        List<Temperature> tempList;
-        CPUControl cpuControl;
+        
         public MainForm()
         {
             InitializeComponent();
@@ -42,17 +39,6 @@ namespace PC_Monitor_Widget
         private void Form1_Load(object sender, EventArgs e)
         {
             
-            //cpb_RAM.DynamicProgress = true;
-            //cpb_Hard.DynamicProgress = true;
-            
-            //cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            //cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            //timer1_Tick(new object(), new EventArgs());
-            //tempList = Temperature.Temperatures;
-            //string str = "";
-            //foreach (Temperature t in tempList) str += t.InstanceName + " " + t.CurrentValue + "\n";
-            //MessageBox.Show(str);
-            timer1.Start();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -62,24 +48,6 @@ namespace PC_Monitor_Widget
                 ReleaseCapture();
                 PostMessage(this.Handle, WM_SYSCOMMAND, DOMOVE, 0);
             }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            float fcpu = CPU.NextValue();
-            float fram = RAM.NextValue();
-            
-            //cpb_CPU.Text = string.Format("{0}%", (int)fcpu);
-            //cpb_CPU.SetValue((int)fcpu);
-            //cpb_RAM.Text = string.Format("{0}%", (int)fram);
-            //cpb_RAM.SetValue((int)fram);
-            
-            
-        }
-
-        private void cPUToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void tsm_CPU_Click(object sender, EventArgs e)

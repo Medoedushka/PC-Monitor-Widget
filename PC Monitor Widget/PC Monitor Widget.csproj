@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Resources\cpu.ico</ApplicationIcon>
+  </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -130,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checked15px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

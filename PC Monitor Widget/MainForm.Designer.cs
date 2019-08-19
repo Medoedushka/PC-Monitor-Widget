@@ -28,32 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnl_Hat = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
             this.pnl_Controls = new System.Windows.Forms.Panel();
             this.pnl_Border = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.componentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_CPU = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_RAM = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_HardDrive = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_CPUTemp = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.CPU = new System.Diagnostics.PerformanceCounter();
-            this.RAM = new System.Diagnostics.PerformanceCounter();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.label1 = new System.Windows.Forms.Label();
             this.pcb_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Hat.SuspendLayout();
             this.panel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Hat
             // 
             this.pnl_Hat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.pnl_Hat.Controls.Add(this.label1);
             this.pnl_Hat.Controls.Add(this.pcb_Close);
             this.pnl_Hat.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Hat.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -91,17 +88,6 @@
             this.pnl_Border.Size = new System.Drawing.Size(204, 5);
             this.pnl_Border.TabIndex = 1;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.componentToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(204, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // componentToolStripMenuItem
             // 
             this.componentToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
@@ -120,7 +106,7 @@
             this.tsm_CPU.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_CPU.ForeColor = System.Drawing.Color.White;
             this.tsm_CPU.Name = "tsm_CPU";
-            this.tsm_CPU.Size = new System.Drawing.Size(167, 22);
+            this.tsm_CPU.Size = new System.Drawing.Size(180, 22);
             this.tsm_CPU.Text = "CPU";
             this.tsm_CPU.Click += new System.EventHandler(this.tsm_CPU_Click);
             // 
@@ -129,7 +115,7 @@
             this.tsm_RAM.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_RAM.ForeColor = System.Drawing.Color.White;
             this.tsm_RAM.Name = "tsm_RAM";
-            this.tsm_RAM.Size = new System.Drawing.Size(167, 22);
+            this.tsm_RAM.Size = new System.Drawing.Size(180, 22);
             this.tsm_RAM.Text = "RAM";
             this.tsm_RAM.Click += new System.EventHandler(this.tsm_RAM_Click);
             // 
@@ -138,7 +124,7 @@
             this.tsm_HardDrive.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_HardDrive.ForeColor = System.Drawing.Color.White;
             this.tsm_HardDrive.Name = "tsm_HardDrive";
-            this.tsm_HardDrive.Size = new System.Drawing.Size(167, 22);
+            this.tsm_HardDrive.Size = new System.Drawing.Size(180, 22);
             this.tsm_HardDrive.Text = "Hard Drive";
             this.tsm_HardDrive.Click += new System.EventHandler(this.tsm_HardDrive_Click);
             // 
@@ -151,21 +137,27 @@
             this.tsm_CPUTemp.Text = "CPU Temperature";
             this.tsm_CPUTemp.Click += new System.EventHandler(this.tsm_CPUTemp_Click);
             // 
-            // timer1
+            // menuStrip1
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.componentToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(204, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // CPU
+            // label1
             // 
-            this.CPU.CategoryName = "Processor";
-            this.CPU.CounterName = "% Processor Time";
-            this.CPU.InstanceName = "_Total";
-            // 
-            // RAM
-            // 
-            this.RAM.CategoryName = "Memory";
-            this.RAM.CounterName = "% Committed Bytes In Use";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(2, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "PC Monitor Widget";
             // 
             // pcb_Close
             // 
@@ -186,18 +178,18 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.pnl_Hat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl_Hat.ResumeLayout(false);
+            this.pnl_Hat.PerformLayout();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.ResumeLayout(false);
 
@@ -207,18 +199,16 @@
 
         private System.Windows.Forms.Panel pnl_Hat;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Timer timer1;
-        private System.Diagnostics.PerformanceCounter CPU;
-        private System.Diagnostics.PerformanceCounter RAM;
         private System.Windows.Forms.PictureBox pcb_Close;
+        private System.Windows.Forms.Panel pnl_Border;
+        private System.Windows.Forms.Panel pnl_Controls;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem componentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsm_CPU;
         private System.Windows.Forms.ToolStripMenuItem tsm_RAM;
         private System.Windows.Forms.ToolStripMenuItem tsm_HardDrive;
         private System.Windows.Forms.ToolStripMenuItem tsm_CPUTemp;
-        private System.Windows.Forms.Panel pnl_Border;
-        private System.Windows.Forms.Panel pnl_Controls;
+        private System.Windows.Forms.Label label1;
     }
 }
 
