@@ -86,7 +86,6 @@
     <Compile Include="PC Monitor Controls\RAMControl.Designer.cs">
       <DependentUpon>RAMControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Temperature.cs" />
     <EmbeddedResource Include="PC Monitor Controls\CPUTemp.resx">
       <DependentUpon>CPUTemp.cs</DependentUpon>
     </EmbeddedResource>
