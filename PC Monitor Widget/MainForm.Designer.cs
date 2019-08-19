@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnl_Hat = new System.Windows.Forms.Panel();
-            this.pcb_Close = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();
             this.pnl_Controls = new System.Windows.Forms.Panel();
+            this.pcb_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Border = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.componentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +44,8 @@
             this.CPU = new System.Diagnostics.PerformanceCounter();
             this.RAM = new System.Diagnostics.PerformanceCounter();
             this.pnl_Hat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
@@ -59,19 +59,9 @@
             this.pnl_Hat.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl_Hat.Location = new System.Drawing.Point(0, 0);
             this.pnl_Hat.Name = "pnl_Hat";
-            this.pnl_Hat.Size = new System.Drawing.Size(204, 27);
+            this.pnl_Hat.Size = new System.Drawing.Size(204, 21);
             this.pnl_Hat.TabIndex = 0;
             this.pnl_Hat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // pcb_Close
-            // 
-            this.pcb_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcb_Close.Image = global::PC_Monitor_Widget.Properties.Resources.uncheckedCancel27px;
-            this.pcb_Close.Location = new System.Drawing.Point(177, 0);
-            this.pcb_Close.Name = "pcb_Close";
-            this.pcb_Close.Size = new System.Drawing.Size(27, 27);
-            this.pcb_Close.TabIndex = 0;
-            this.pcb_Close.TabStop = false;
             // 
             // panel
             // 
@@ -79,9 +69,9 @@
             this.panel.Controls.Add(this.pnl_Border);
             this.panel.Controls.Add(this.menuStrip1);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(0, 27);
+            this.panel.Location = new System.Drawing.Point(0, 21);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(204, 204);
+            this.panel.Size = new System.Drawing.Size(204, 210);
             this.panel.TabIndex = 1;
             // 
             // pnl_Controls
@@ -89,8 +79,18 @@
             this.pnl_Controls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Controls.Location = new System.Drawing.Point(0, 29);
             this.pnl_Controls.Name = "pnl_Controls";
-            this.pnl_Controls.Size = new System.Drawing.Size(204, 175);
+            this.pnl_Controls.Size = new System.Drawing.Size(204, 181);
             this.pnl_Controls.TabIndex = 2;
+            // 
+            // pcb_Close
+            // 
+            this.pcb_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcb_Close.Image = global::PC_Monitor_Widget.Properties.Resources.unchecked21px;
+            this.pcb_Close.Location = new System.Drawing.Point(183, 0);
+            this.pcb_Close.Name = "pcb_Close";
+            this.pcb_Close.Size = new System.Drawing.Size(21, 21);
+            this.pcb_Close.TabIndex = 0;
+            this.pcb_Close.TabStop = false;
             // 
             // pnl_Border
             // 
@@ -130,7 +130,7 @@
             this.tsm_CPU.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_CPU.ForeColor = System.Drawing.Color.White;
             this.tsm_CPU.Name = "tsm_CPU";
-            this.tsm_CPU.Size = new System.Drawing.Size(180, 22);
+            this.tsm_CPU.Size = new System.Drawing.Size(167, 22);
             this.tsm_CPU.Text = "CPU";
             this.tsm_CPU.Click += new System.EventHandler(this.tsm_CPU_Click);
             // 
@@ -139,7 +139,7 @@
             this.tsm_RAM.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_RAM.ForeColor = System.Drawing.Color.White;
             this.tsm_RAM.Name = "tsm_RAM";
-            this.tsm_RAM.Size = new System.Drawing.Size(180, 22);
+            this.tsm_RAM.Size = new System.Drawing.Size(167, 22);
             this.tsm_RAM.Text = "RAM";
             this.tsm_RAM.Click += new System.EventHandler(this.tsm_RAM_Click);
             // 
@@ -148,7 +148,7 @@
             this.tsm_HardDrive.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_HardDrive.ForeColor = System.Drawing.Color.White;
             this.tsm_HardDrive.Name = "tsm_HardDrive";
-            this.tsm_HardDrive.Size = new System.Drawing.Size(180, 22);
+            this.tsm_HardDrive.Size = new System.Drawing.Size(167, 22);
             this.tsm_HardDrive.Text = "Hard Drive";
             this.tsm_HardDrive.Click += new System.EventHandler(this.tsm_HardDrive_Click);
             // 
@@ -157,7 +157,7 @@
             this.tsm_CPUTemp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_CPUTemp.ForeColor = System.Drawing.Color.White;
             this.tsm_CPUTemp.Name = "tsm_CPUTemp";
-            this.tsm_CPUTemp.Size = new System.Drawing.Size(180, 22);
+            this.tsm_CPUTemp.Size = new System.Drawing.Size(167, 22);
             this.tsm_CPUTemp.Text = "CPU Temperature";
             // 
             // timer1
@@ -191,9 +191,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnl_Hat.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
