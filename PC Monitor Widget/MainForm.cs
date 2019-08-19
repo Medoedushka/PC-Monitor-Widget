@@ -31,20 +31,22 @@ namespace PC_Monitor_Widget
         public MainForm()
         {
             InitializeComponent();
+            
             pcb_Close.MouseEnter += (s, e) => { pcb_Close.Image = Properties.Resources.checkedCancel27px; };
             pcb_Close.MouseLeave += (s, e) => { pcb_Close.Image = Properties.Resources.uncheckedCancel27px; };
             pcb_Close.Click += (s, e) => { Application.Exit(); };
+            menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cpb_CPU.DynamicProgress = true;
-            cpb_RAM.DynamicProgress = true;
-            cpb_Hard.DynamicProgress = true;
-            cpb_CPU.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            timer1_Tick(new object(), new EventArgs());
+            //cpb_CPU.DynamicProgress = true;
+            //cpb_RAM.DynamicProgress = true;
+            //cpb_Hard.DynamicProgress = true;
+            //cpb_CPU.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
+            //cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
+            //cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
+            //timer1_Tick(new object(), new EventArgs());
             //tempList = Temperature.Temperatures;
             //string str = "";
             //foreach (Temperature t in tempList) str += t.InstanceName + " " + t.CurrentValue + "\n";
@@ -68,13 +70,15 @@ namespace PC_Monitor_Widget
             double f1 = drive.TotalFreeSpace / 1048576;
             double f2 = drive.TotalSize / 1048576;
             double size = 100 * (1 - f1 / f2);
-            cpb_CPU.Text = string.Format("{0}%", (int)fcpu);
-            cpb_CPU.SetValue((int)fcpu);
-            cpb_RAM.Text = string.Format("{0}%", (int)fram);
-            cpb_RAM.SetValue((int)fram);
-            cpb_Hard.Text = string.Format("{0}%", (int)size);
-            cpb_Hard.SetValue((int)size);
+            //cpb_CPU.Text = string.Format("{0}%", (int)fcpu);
+            //cpb_CPU.SetValue((int)fcpu);
+            //cpb_RAM.Text = string.Format("{0}%", (int)fram);
+            //cpb_RAM.SetValue((int)fram);
+            //cpb_Hard.Text = string.Format("{0}%", (int)size);
+            //cpb_Hard.SetValue((int)size);
             
         }
+
+       
     }
 }
