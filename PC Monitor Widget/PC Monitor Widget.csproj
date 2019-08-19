@@ -53,16 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CPUControl.cs">
+    <Compile Include="PC Monitor Controls\CPUTemp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CPUControl.Designer.cs">
+    <Compile Include="PC Monitor Controls\CPUTemp.Designer.cs">
+      <DependentUpon>CPUTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PC Monitor Controls\CPUControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PC Monitor Controls\CPUControl.Designer.cs">
       <DependentUpon>CPUControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="HardDriveControl.cs">
+    <Compile Include="PC Monitor Controls\HardDriveControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HardDriveControl.Designer.cs">
+    <Compile Include="PC Monitor Controls\HardDriveControl.Designer.cs">
       <DependentUpon>HardDriveControl.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -74,17 +80,20 @@
     <Compile Include="MyColorTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RAMControl.cs">
+    <Compile Include="PC Monitor Controls\RAMControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RAMControl.Designer.cs">
+    <Compile Include="PC Monitor Controls\RAMControl.Designer.cs">
       <DependentUpon>RAMControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Temperature.cs" />
-    <EmbeddedResource Include="CPUControl.resx">
+    <EmbeddedResource Include="PC Monitor Controls\CPUTemp.resx">
+      <DependentUpon>CPUTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC Monitor Controls\CPUControl.resx">
       <DependentUpon>CPUControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HardDriveControl.resx">
+    <EmbeddedResource Include="PC Monitor Controls\HardDriveControl.resx">
       <DependentUpon>HardDriveControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -100,7 +109,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RAMControl.resx">
+    <EmbeddedResource Include="PC Monitor Controls\RAMControl.resx">
       <DependentUpon>RAMControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />

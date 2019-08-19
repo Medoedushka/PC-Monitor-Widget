@@ -132,5 +132,22 @@ namespace PC_Monitor_Widget
             pnl_Hat.BackColor = Color.FromArgb(77, 14, 140);
             pnl_Border.BackColor = Color.FromArgb(126, 23, 230);
         }
+
+        private void tsm_CPUTemp_Click(object sender, EventArgs e)
+        {
+            tsm_CPU.Checked = false;
+            tsm_RAM.Checked = false;
+            tsm_HardDrive.Checked = false;
+            tsm_CPUTemp.Checked = true;
+
+            pnl_Controls.Controls.Clear();
+            pnl_Controls.Controls.Add(new CPUTemp()
+            {
+                Location = new Point(0, 0)
+            });
+
+            pnl_Hat.BackColor = Color.FromArgb(178, 62, 0);
+            pnl_Border.BackColor = Color.FromArgb(255, 89, 0);
+        }
     }
 }

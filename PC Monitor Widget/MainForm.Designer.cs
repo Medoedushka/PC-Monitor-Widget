@@ -147,8 +147,9 @@
             this.tsm_CPUTemp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsm_CPUTemp.ForeColor = System.Drawing.Color.White;
             this.tsm_CPUTemp.Name = "tsm_CPUTemp";
-            this.tsm_CPUTemp.Size = new System.Drawing.Size(167, 22);
+            this.tsm_CPUTemp.Size = new System.Drawing.Size(180, 22);
             this.tsm_CPUTemp.Text = "CPU Temperature";
+            this.tsm_CPUTemp.Click += new System.EventHandler(this.tsm_CPUTemp_Click);
             // 
             // timer1
             // 
