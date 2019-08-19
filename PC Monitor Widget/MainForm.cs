@@ -68,15 +68,12 @@ namespace PC_Monitor_Widget
         {
             float fcpu = CPU.NextValue();
             float fram = RAM.NextValue();
-            double f1 = drive.TotalFreeSpace / 1048576;
-            double f2 = drive.TotalSize / 1048576;
-            double size = 100 * (1 - f1 / f2);
+            
             //cpb_CPU.Text = string.Format("{0}%", (int)fcpu);
             //cpb_CPU.SetValue((int)fcpu);
             //cpb_RAM.Text = string.Format("{0}%", (int)fram);
             //cpb_RAM.SetValue((int)fram);
-            //cpb_Hard.Text = string.Format("{0}%", (int)size);
-            //cpb_Hard.SetValue((int)size);
+            
             
         }
 
@@ -97,6 +94,43 @@ namespace PC_Monitor_Widget
             {
                 Location = new Point (0, 0)
             });
+
+            pnl_Hat.BackColor = Color.FromArgb(104, 158, 49);
+            pnl_Border.BackColor = Color.FromArgb(162, 247, 77);
+        }
+
+        private void tsm_RAM_Click(object sender, EventArgs e)
+        {
+            tsm_CPU.Checked = false;
+            tsm_RAM.Checked = true;
+            tsm_HardDrive.Checked = false;
+            tsm_CPUTemp.Checked = false;
+
+            pnl_Controls.Controls.Clear();
+            pnl_Controls.Controls.Add(new RAMControl()
+            {
+                Location = new Point(0, 0)
+            });
+
+            pnl_Hat.BackColor = Color.FromArgb(166, 0, 33);
+            pnl_Border.BackColor = Color.FromArgb(255, 0, 45);
+        }
+
+        private void tsm_HardDrive_Click(object sender, EventArgs e)
+        {
+            tsm_CPU.Checked = false;
+            tsm_RAM.Checked = false;
+            tsm_HardDrive.Checked = true;
+            tsm_CPUTemp.Checked = false;
+
+            pnl_Controls.Controls.Clear();
+            pnl_Controls.Controls.Add(new HardDriveControl()
+            {
+                Location = new Point(0, 0)
+            });
+
+            pnl_Hat.BackColor = Color.FromArgb(77, 14, 140);
+            pnl_Border.BackColor = Color.FromArgb(126, 23, 230);
         }
     }
 }

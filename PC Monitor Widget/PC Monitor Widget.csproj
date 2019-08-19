@@ -59,6 +59,12 @@
     <Compile Include="CPUControl.Designer.cs">
       <DependentUpon>CPUControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="HardDriveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HardDriveControl.Designer.cs">
+      <DependentUpon>HardDriveControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +74,18 @@
     <Compile Include="MyColorTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAMControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RAMControl.Designer.cs">
+      <DependentUpon>RAMControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Temperature.cs" />
     <EmbeddedResource Include="CPUControl.resx">
       <DependentUpon>CPUControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardDriveControl.resx">
+      <DependentUpon>HardDriveControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -85,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RAMControl.resx">
+      <DependentUpon>RAMControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
