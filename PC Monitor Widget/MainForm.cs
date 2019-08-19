@@ -27,6 +27,7 @@ namespace PC_Monitor_Widget
         #endregion
 
         DriveInfo drive = new DriveInfo("C");
+        List<Temperature> tempList;
         public MainForm()
         {
             InitializeComponent();
@@ -44,6 +45,10 @@ namespace PC_Monitor_Widget
             cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             timer1_Tick(new object(), new EventArgs());
+            //tempList = Temperature.Temperatures;
+            //string str = "";
+            //foreach (Temperature t in tempList) str += t.InstanceName + " " + t.CurrentValue + "\n";
+            //MessageBox.Show(str);
             timer1.Start();
         }
 
@@ -69,7 +74,7 @@ namespace PC_Monitor_Widget
             cpb_RAM.SetValue((int)fram);
             cpb_Hard.Text = string.Format("{0}%", (int)size);
             cpb_Hard.SetValue((int)size);
-            //label2.Text = fcpu.ToString();
+            
         }
     }
 }
