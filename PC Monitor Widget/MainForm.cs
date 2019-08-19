@@ -28,6 +28,7 @@ namespace PC_Monitor_Widget
 
         DriveInfo drive = new DriveInfo("C");
         List<Temperature> tempList;
+        CPUControl cpuControl;
         public MainForm()
         {
             InitializeComponent();
@@ -40,10 +41,10 @@ namespace PC_Monitor_Widget
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //cpb_CPU.DynamicProgress = true;
+            
             //cpb_RAM.DynamicProgress = true;
             //cpb_Hard.DynamicProgress = true;
-            //cpb_CPU.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
+            
             //cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             //cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             //timer1_Tick(new object(), new EventArgs());
@@ -79,6 +80,23 @@ namespace PC_Monitor_Widget
             
         }
 
-       
+        private void cPUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsm_CPU_Click(object sender, EventArgs e)
+        {
+            tsm_CPU.Checked = true;
+            tsm_RAM.Checked = false;
+            tsm_HardDrive.Checked = false;
+            tsm_CPUTemp.Checked = false;
+
+            pnl_Controls.Controls.Clear();
+            pnl_Controls.Controls.Add(new CPUControl()
+            {
+                Location = new Point (0, 0)
+            });
+        }
     }
 }
