@@ -33,8 +33,8 @@ namespace PC_Monitor_Widget
         {
             InitializeComponent();
             
-            pcb_Close.MouseEnter += (s, e) => { pcb_Close.Image = Properties.Resources.checked21px; };
-            pcb_Close.MouseLeave += (s, e) => { pcb_Close.Image = Properties.Resources.unchecked21px; };
+            pcb_Close.MouseEnter += (s, e) => { pcb_Close.Image = Properties.Resources.checked15px; };
+            pcb_Close.MouseLeave += (s, e) => { pcb_Close.Image = Properties.Resources.unchecked15px; };
             pcb_Close.Click += (s, e) => { Application.Exit(); };
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MyColorTable());
         }

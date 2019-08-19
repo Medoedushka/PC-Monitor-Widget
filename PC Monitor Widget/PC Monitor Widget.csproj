@@ -117,12 +117,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\checked21px.png" />
+    <None Include="Resources\unchecked15px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\unchecked21px.png" />
+    <None Include="Resources\checked15px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

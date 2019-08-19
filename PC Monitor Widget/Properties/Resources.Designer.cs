@@ -63,9 +63,9 @@ namespace PC_Monitor_Widget.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap checked21px {
+        internal static System.Drawing.Bitmap checked15px {
             get {
-                object obj = ResourceManager.GetObject("checked21px", resourceCulture);
+                object obj = ResourceManager.GetObject("checked15px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace PC_Monitor_Widget.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap unchecked21px {
+        internal static System.Drawing.Bitmap unchecked15px {
             get {
-                object obj = ResourceManager.GetObject("unchecked21px", resourceCulture);
+                object obj = ResourceManager.GetObject("unchecked15px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -32,7 +32,6 @@
             this.pnl_Hat = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
             this.pnl_Controls = new System.Windows.Forms.Panel();
-            this.pcb_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Border = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.componentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,12 +42,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CPU = new System.Diagnostics.PerformanceCounter();
             this.RAM = new System.Diagnostics.PerformanceCounter();
+            this.pcb_Close = new System.Windows.Forms.PictureBox();
             this.pnl_Hat.SuspendLayout();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Hat
@@ -81,16 +81,6 @@
             this.pnl_Controls.Name = "pnl_Controls";
             this.pnl_Controls.Size = new System.Drawing.Size(204, 181);
             this.pnl_Controls.TabIndex = 2;
-            // 
-            // pcb_Close
-            // 
-            this.pcb_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcb_Close.Image = global::PC_Monitor_Widget.Properties.Resources.unchecked21px;
-            this.pcb_Close.Location = new System.Drawing.Point(183, 0);
-            this.pcb_Close.Name = "pcb_Close";
-            this.pcb_Close.Size = new System.Drawing.Size(21, 21);
-            this.pcb_Close.TabIndex = 0;
-            this.pcb_Close.TabStop = false;
             // 
             // pnl_Border
             // 
@@ -176,6 +166,16 @@
             this.RAM.CategoryName = "Memory";
             this.RAM.CounterName = "% Committed Bytes In Use";
             // 
+            // pcb_Close
+            // 
+            this.pcb_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcb_Close.Image = global::PC_Monitor_Widget.Properties.Resources.unchecked15px;
+            this.pcb_Close.Location = new System.Drawing.Point(186, 3);
+            this.pcb_Close.Name = "pcb_Close";
+            this.pcb_Close.Size = new System.Drawing.Size(15, 15);
+            this.pcb_Close.TabIndex = 0;
+            this.pcb_Close.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,11 +193,11 @@
             this.pnl_Hat.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.ResumeLayout(false);
 
         }
