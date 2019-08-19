@@ -30,16 +30,20 @@ namespace PC_Monitor_Widget
         public MainForm()
         {
             InitializeComponent();
+            pcb_Close.MouseEnter += (s, e) => { pcb_Close.Image = Properties.Resources.checkedCancel27px; };
+            pcb_Close.MouseLeave += (s, e) => { pcb_Close.Image = Properties.Resources.uncheckedCancel27px; };
+            pcb_Close.Click += (s, e) => { Application.Exit(); };
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
             cpb_CPU.DynamicProgress = true;
             cpb_RAM.DynamicProgress = true;
             cpb_Hard.DynamicProgress = true;
             cpb_CPU.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             cpb_RAM.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
             cpb_Hard.TextFont = new Font("Century Gothic", 15, FontStyle.Bold);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            timer1_Tick(new object(), new EventArgs());
             timer1.Start();
         }
 

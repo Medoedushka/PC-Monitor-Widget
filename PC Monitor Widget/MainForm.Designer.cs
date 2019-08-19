@@ -40,14 +40,18 @@
             this.cpb_Hard = new CircularProgressBar.CircularProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.RAM = new System.Diagnostics.PerformanceCounter();
+            this.pcb_Close = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.pnl_Controls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(89)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pcb_Close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -167,6 +171,15 @@
             this.RAM.CategoryName = "Memory";
             this.RAM.CounterName = "% Committed Bytes In Use";
             // 
+            // pcb_Close
+            // 
+            this.pcb_Close.Image = global::PC_Monitor_Widget.Properties.Resources.uncheckedCancel27px;
+            this.pcb_Close.Location = new System.Drawing.Point(302, 0);
+            this.pcb_Close.Name = "pcb_Close";
+            this.pcb_Close.Size = new System.Drawing.Size(27, 27);
+            this.pcb_Close.TabIndex = 0;
+            this.pcb_Close.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,10 +193,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
             this.pnl_Controls.ResumeLayout(false);
             this.pnl_Controls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_Close)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,6 +216,7 @@
         private System.Windows.Forms.Label label3;
         private CircularProgressBar.CircularProgressBar cpb_Hard;
         private System.Diagnostics.PerformanceCounter RAM;
+        private System.Windows.Forms.PictureBox pcb_Close;
     }
 }
 
